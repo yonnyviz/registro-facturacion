@@ -1,0 +1,14 @@
+/* Add application styles & imports to this file! */
+// @import "./node_modules/ag-grid-community/src/styles/ag-grid.scss";
+// @import "./node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+
+// .ag-theme-alpine {
+//     @include ag-theme-alpine();
+// }
+
+
+@media (min-width: 576px){
+  .modal-dialog {
+      max-width: 75% !important;
+  }
+}

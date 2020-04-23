@@ -1,0 +1,81 @@
+<div class="modal-header">
+	<h5 class="m-0">Formulario de Declaración</h5>
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form class="needs-validation modal-body" [formGroup]="formulario" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+
+		<div class="row">
+			<div class="col-6 col-sm-6 mb-3">
+				<label for="nombres">Fecha de Emisión</label>
+				<input type="text" class="form-control" id="nombres" placeholder="" value="" formControlName="fecha_emision" required>
+				<div class="invalid-feedback">
+					Valid first name is required.
+				</div>
+			</div>
+			<div class="col-6 col-sm-6 mb-3">
+				<label for="lastName">Codigo de Factura</label>
+				<input type="text" class="form-control" id="codigo_factura" placeholder="" value="" formControlName="codigo_factura" required>
+				<div class="invalid-feedback">
+					Valid last name is required.
+				</div>
+			</div>
+		</div>
+		<hr class="mb-4">
+    <h6>Tipo de cliente</h6>
+		<div class="d-flex my-3">
+			<div class="custom-control custom-radio mr-4">
+				<input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+				<label class="custom-control-label" for="credit">Persona</label>
+			</div>
+			<div class="custom-control custom-radio">
+				<input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+				<label class="custom-control-label" for="debit">Negocio</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 mb-3">
+				<label for="nombres">Nombres</label>
+				<input type="text" class="form-control" id="nombres" placeholder="" value="" formControlName="nombres" required>
+				<div class="invalid-feedback">
+					Valid first name is required.
+				</div>
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="lastName">Razon Social</label>
+				<input type="text" class="form-control" id="razon_social" placeholder="" value="" formControlName="razon_social" required>
+				<div class="invalid-feedback">
+					Valid last name is required.
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 mb-3">
+				<label for="nombres">Tipo de Documento</label>
+				<input type="text" class="form-control" id="nombres" placeholder="" value="" formControlName="tipo_doc" required>
+				<div class="invalid-feedback">
+					Valid first name is required.
+				</div>
+			</div>
+			<div class="col-md-6 mb-3">
+				<label for="lastName">Nro Documento</label>
+				<input type="text" class="form-control" id="apellidos" placeholder="" value="" formControlName="nro_doc" required>
+				<div class="invalid-feedback">
+					Valid last name is required.
+				</div>
+			</div>
+		</div>
+		<div class="mb-3">
+			<label for="address">Dirección</label>
+			<input type="text" class="form-control" id="address" placeholder="1234 Main St" formControlName="direccion" required>
+			<div class="invalid-feedback">
+				Please enter your shipping address.
+			</div>
+		</div>
+
+	<div class="modal-footer">
+		<button type="button" class="btn btn-light col" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')">Cancelar</button>
+		<button type="submit" class="btn btn-primary col">Guardar</button>
+	</div>
+</form>
